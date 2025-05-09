@@ -1,0 +1,143 @@
+/* General container */
+.quiz-container {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff0f5;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4b004b;
+  position: relative;
+}
+
+/* Title */
+.quiz-container h2 {
+  font-size: 2rem;
+  color: #d63384;
+  margin-bottom: 20px;
+}
+
+/* Dropdown */
+.quiz-container select {
+  padding: 8px 12px;
+  border: 2px solid #d63384;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #ffe6f0;
+}
+
+/* Start button */
+.quiz-container button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  background: #ff69b4;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quiz-container button:hover {
+  background: #ff85c1;
+}
+
+/* Questions */
+.quiz-question h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #800040;
+}
+
+/* Options */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.options button {
+  background-color: #fff;
+  color: #d63384;
+  border: 2px solid #d63384;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.options button:hover {
+  background-color: #ffccdd;
+  color: #4b004b;
+}
+
+/* Results */
+.result {
+  margin-top: 20px;
+}
+
+.result h3 {
+  font-size: 24px;
+  color: #008000;
+}
+
+.result p {
+  font-size: 18px;
+  color: #ff1493;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Review section */
+.review {
+  text-align: left;
+  margin-top: 25px;
+}
+
+.review h4 {
+  color: #b30059;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.review ul {
+  list-style: none;
+  padding: 0;
+}
+
+.review li {
+  background-color: #fff;
+  border-left: 5px solid #ff69b4;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.1);
+}
+
+.review span {
+  font-weight: bold;
+}
+
+/* Heart animation (optional) */
+.quiz-container::before {
+  content: "❤️";
+  font-size: 50px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: floatHeart 2s infinite ease-in-out;
+}
+
+@keyframes floatHeart {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
